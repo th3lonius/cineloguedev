@@ -1,5 +1,3 @@
-@charset "utf-8";
-
 /*
 Title: Screen styles
 Author: Matthew Mesaros (mesaros.creative@gmail.com)
@@ -20,28 +18,22 @@ Author: Matthew Mesaros (mesaros.creative@gmail.com)
 /* =ESSAYCONTENT ----------------------------------------------- */
     #essayBody {
         text-align: left;
-        width: 100%;
     }
     
     #essayBody p {
-        font-size: 1.125em;
-        font-weight: 300;
+        font-size: 1em;
     }
     
     .essayMeta {
         color: #FFF;
-        font-size: 26px;
-        font-weight: 300;
-        line-height: 1.3;
-        text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
+        line-height: 1.5;
     }
     
     .essayMeta h1 {
         color: #FFFFFF;
         font-family: "brandon-grotesque";
-        font-size: 5em;
+        font-size: 3em;
         line-height: 1;
-        text-shadow: 4px 6px 1px rgba(0,0,0,0.2);
         text-transform: uppercase;
     }
   
@@ -114,7 +106,9 @@ and (min-width: 720px) {
     
 /* =ESSAYCONTENT
 ----------------------------------------------- */
-    .essayBody p { font-size: 1.375em; }
+    #essayBody p {
+        font-size: 1em;
+    }
 
 }
 
@@ -123,14 +117,13 @@ and (min-width: 1024px) {
 
 /* =GLOBALS
 ----------------------------------------------- */
-    .container { padding-top: 100px; }
+
     
 /* =ESSAYCONTENT
 ----------------------------------------------- */
     
-    .essayBody {
+    #essayBody {
         margin: 0 auto;
-        width: 62.5%;
     }
     
 }
@@ -147,12 +140,12 @@ and (min-width: 1280px) {
     
 /* =ESSAYCONTENT
 ----------------------------------------------- */
-    .essayBody {
+    #essayBody {
         float: left;
-        width: 70%;
     }
 
-    .essayBody p {
+    #essayBody p {
+        font-size: 1.125em;
         line-height: 1.5;
     }
     
@@ -175,35 +168,38 @@ and (min-width: 1280px) {
     
     .essayMeta h1 {
         font-size: 3em;
+        font-weight: 100;
     }
     
     .essayMeta h2 {
         color: #FAFAFA;
-        font-size: 2em;
+        font-size: 1.5em;
+        font-weight: 500;
         text-transform: uppercase;
+    }
+    
+    .essayMeta h1, .essayMeta h2, .byline {
+        color: #FFF;
+        color: rgba(255,255,255,0.9);
+        line-height: 1.2;
     }
     
     .byline {
         color: #FFF;
-        line-height: 1.5;
+        font-weight: 1em;
     }
     
     .filmData {
-        font-size: 1em;
-        font-weight: 300;
         width: 100%;
     }
     
     .filmData ul li {
         color: #FFF;
-        line-height: 1.5em;
-        text-align: left;
+        font-size: 1.25em;
+        line-height: 1.6;
+        text-align: right;
     }
-    
-    .filmData ul li em {
-        color: tomato;
-    }
-    
+            
 }
 
 
