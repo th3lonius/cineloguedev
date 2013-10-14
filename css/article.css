@@ -1,0 +1,253 @@
+@charset "utf-8";
+
+/*
+Title: Screen styles
+Author: Matthew Mesaros (mesaros.creative@gmail.com)
+*/
+
+/* CSS Document */
+
+
+@media only screen and (min-width: 500px) {
+    
+/* =GLOBALS ----------------------------------------------- */
+    .container {
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+    }
+    
+/* =ESSAYCONTENT ----------------------------------------------- */
+    #essayBody {
+        text-align: left;
+        width: 100%;
+    }
+    
+    #essayBody p {
+        font-size: 1.125em;
+        font-weight: 300;
+    }
+    
+    .essayMeta {
+        color: #FFF;
+        font-size: 26px;
+        font-weight: 300;
+        line-height: 1.3;
+        text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
+    }
+    
+    .essayMeta h1 {
+        color: #FFFFFF;
+        font-family: "brandon-grotesque";
+        font-size: 5em;
+        line-height: 1;
+        text-shadow: 4px 6px 1px rgba(0,0,0,0.2);
+        text-transform: uppercase;
+    }
+  
+    .filmData {
+        margin-right: 24px;
+        width: 100%;
+    }
+    
+    .filmData ul li {
+        font-size: 1.375em;
+        font-weight: 300;
+        line-height: 1.5em;
+        text-align: left;
+    }
+        
+    .review_container a {
+        background: #E6E7E8;
+        color: #666;
+        font-size: 24px;
+        font-weight: 300;
+        letter-spacing: 1px;
+        line-height: 0;
+        max-height: 56px;
+        padding: 28px 40px;
+        position: absolute;
+        top: -58px;
+        left: 0;
+        width: 163px;
+    }
+    
+/* =SOCIAL ----------------------------------------------- */
+    .social {
+        background-position: center center;
+        background-repeat: no-repeat;
+        bottom: 40px;
+        display: block;
+        padding: 20px;
+        position: absolute;
+    }
+    
+    .facebook {
+        background-color: #3B5998;
+        background-image: url(../img/facebook.svg);
+        height: 29px;
+        left: 40px;
+        width: 14px;
+    }
+    
+    .twitter {
+        background-color: #38ACE0;
+        background-image: url(../img/twitter.svg);
+        height: 23px;
+        left: 90px;
+        width: 33px;
+    }
+    
+    .google {
+        background-color: #DD4B39;
+        background-image: url(../img/google.svg);
+        height: 32px;
+        left: 140px;
+        width: 21px;
+    }
+
+}
+
+
+@media only screen 
+and (min-width: 720px) {
+    
+/* =ESSAYCONTENT
+----------------------------------------------- */
+    .essayBody p { font-size: 1.375em; }
+
+}
+
+@media only screen 
+and (min-width: 1024px) {
+
+/* =GLOBALS
+----------------------------------------------- */
+    .container { padding-top: 100px; }
+    
+/* =ESSAYCONTENT
+----------------------------------------------- */
+    
+    .essayBody {
+        margin: 0 auto;
+        width: 62.5%;
+    }
+    
+}
+
+@media only screen 
+and (min-width: 1280px) {
+    
+/* =GLOBALS
+----------------------------------------------- */
+    .container {
+        background-size: contain;
+        padding-top: 0;
+    }
+    
+/* =ESSAYCONTENT
+----------------------------------------------- */
+    .essayBody {
+        float: left;
+        width: 70%;
+    }
+
+    .essayBody p {
+        line-height: 1.5;
+    }
+    
+    .prologue:first-letter {
+        background: #444;
+        display: block;
+        color: #FFF;
+        float: left;
+        font-size: 5em;
+        font-weight: bold;
+        line-height: 1;
+        margin: 10px 6px 0;
+        padding: 1px 5px;
+    }
+        
+    .essayMeta {
+        position: relative;
+        text-align: center;
+    }
+    
+    .essayMeta h1 {
+        font-size: 3em;
+    }
+    
+    .essayMeta h2 {
+        color: #FAFAFA;
+        font-size: 2em;
+        text-transform: uppercase;
+    }
+    
+    .byline {
+        color: #FFF;
+        line-height: 1.5;
+    }
+    
+    .filmData {
+        font-size: 1em;
+        font-weight: 300;
+        width: 100%;
+    }
+    
+    .filmData ul li {
+        color: #FFF;
+        line-height: 1.5em;
+        text-align: left;
+    }
+    
+    .filmData ul li em {
+        color: tomato;
+    }
+    
+}
+
+
+
+
+    #current_issue {
+        color: #FFF;
+        font-family: "brandon-grotesque";
+        font-size: 1.5em;
+        line-height: 1.2;
+    }
+    
+    #current_issue h2 a {
+        color: #FFF;
+        font-size: 3em;
+        font-weight: 100;
+        left: -25px;
+        position: relative;
+        text-transform: uppercase;
+    }
+    
+    #current_issue h2 a::before {
+        border-left: 1px solid #FFF;
+        content: "";
+        left: -20px;
+        padding-left: 20px;
+        position: relative;
+    }
+    
+    #current_issue ul li {
+        font-weight: 300;
+        line-height: 1.5;
+    }
+    
+    #current_issue ul li a {
+        color: rgba(255,255,255,0.6);
+    }
+    
+    #current_issue ul li a:hover {
+        color: rgba(255,255,255,0.99);
+        margin-left: -20px;
+    }
+    
+    #current_issue ul li a:hover:before {
+        content: ">";
+        padding-right: 10px;
+    }

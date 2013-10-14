@@ -1,0 +1,394 @@
+@charset "utf-8";
+
+/*
+Title: Screen styles
+Author: Matthew Mesaros (mesaros.creative@gmail.com)
+*/
+
+/* CSS Document */
+
+/* =RESET
+----------------------------------------------- */
+* {
+    background: transparent;
+    border: 0;
+    font-size: 100%;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none; }
+
+ol,ul {
+    list-style: none;
+}
+
+:focus {
+    outline: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* =BASIC
+----------------------------------------------- */
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+img, object, embed {
+    max-width: 100%;
+    height: auto; }
+
+p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+}
+
+ul {
+    margin-bottom: 1em;
+}
+
+em { font-style: italic; }
+
+
+/* =REUSABLE CLASSES
+----------------------------------------------- */
+.group:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.group { display: inline-block; }
+
+/* Hides from IE-mac \*/
+* html .group { height: 1%; } /* IE6 */
+*:first-child+html .group { min-height: 1px; } /* IE7 */
+/* End hide from IE-mac */
+
+/* =LINKS
+----------------------------------------------- */
+a, a:link, a:visited {
+    text-decoration: none;
+}
+
+/* =PAGE LAYOUT
+----------------------------------------------- */
+
+body {
+    color: #333;
+    font-family: "museo-slab","Myriad Pro","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+    font-size: 100%;
+    line-height: 1;
+    position: relative;
+    text-align: center;
+    -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+    -webkit-text-size-adjust: 100%;
+}
+
+header {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 30%;
+    z-index: 1;
+}
+
+/* =NAVIGATION
+----------------------------------------------- */
+
+.nudgeLeft {
+  -webkit-transform: translateY(-450px); 
+  -moz-transform: translateX(-450px); 
+  -ms-transform: translateX(-450px); 
+  -o-transform: translateX(-450px);
+    transform: translateX(-450px);
+}
+
+nav {
+    position: absolute;
+    left: 40px;
+    top: 220px;
+    z-index: 99;
+    -webkit-transition: all 0.3s ease;
+}
+
+nav ul li a {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    color: #606061;
+    display: block;
+    font-family: "brandon-grotesque";
+    font-size: 1.25em;
+    padding: 12px 10px 12px 50px;
+    text-align: right;
+}
+
+nav ul li a:hover {
+    border-bottom: 1px solid rgba(0,0,0,0.9);
+    color: #000;
+}
+
+a[role=banner] {
+    border-radius: 300px;
+    padding: 20px;
+    position: absolute;
+    left: 60px;
+    top: 40px;
+    z-index: 100;
+    -webkit-transition: all 0.5s ease;
+}
+
+a[role=banner] img {
+    width: 80px;
+    -webkit-transition: all 0.5s ease;
+}
+
+a[role=banner]:hover {
+    background: rgba(64,64,65,0.9);
+}
+
+a[role=banner]:hover img {
+    transform:rotate(360deg);
+    -ms-transform:rotate(360deg); /* IE 9 */
+    -webkit-transform:rotate(360deg); /* Safari and Chrome */
+}
+
+
+@media only screen 
+and (min-width: 200px) {
+    .container {
+        background-size: cover !important;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100%;
+    }
+    
+    .wrapper {
+        background: #FFF;
+        box-shadow: -1px 0 10px rgba(0,0,0,0.5);
+        height: auto;
+        overflow: hidden;
+        padding: 100px 200px 100px 220px;
+        position: absolute;
+        right: 0;
+        text-align: left;
+        width: 69%;
+        -webkit-transition: all 0.5s ease;
+    }
+    
+    .leftSide {
+         -webkit-transform: translateX(-45%);
+    }
+    
+/* =ASIDE PANEL
+----------------------------------------------- */
+    #aside {
+        background: rgba(0,0,0,0.2);
+        bottom: 0;
+        font-family: "brandon-grotesque", helvetica, arial;
+        left: 0;
+        padding: 64px 80px;
+        position: fixed;
+        text-align: left;
+        top: 0;
+        width: 31%;
+    }
+    
+    #signin {
+        bottom: 2em;
+        display: inline-block;
+        left: 1em;
+        position: fixed;
+    }
+    
+    #signin a {
+        background: #00AEEF;
+        color: #FFF;
+        display: inline;
+        font-size: 0.875em;
+        padding: 12px 16px;
+        text-align: center;
+        width: 50%;
+    }
+    
+    #signin a img {
+        margin-right: 10px;
+        position: relative;
+        top: 5px;
+        width: 30px;
+    }
+    
+/* =CURRENT-ISSUE
+----------------------------------------------- */
+    
+    #current_issue {
+        color: #FFF;
+        font-family: "brandon-grotesque";
+        font-size: 1.5em;
+        line-height: 1.2;
+    }
+    
+    #current_issue h2 a {
+        color: #FFF;
+        font-size: 3em;
+        font-weight: 100;
+        left: -25px;
+        position: relative;
+        text-transform: uppercase;
+    }
+    
+    #current_issue h2 a::before {
+        border-left: 1px solid #FFF;
+        content: "";
+        left: -20px;
+        padding-left: 20px;
+        position: relative;
+    }
+    
+    #current_issue ul li {
+        font-weight: 300;
+        line-height: 1.5;
+    }
+    
+    #current_issue ul li a {
+        color: rgba(255,255,255,0.6);
+    }
+    
+    #current_issue ul li a:hover {
+        color: rgba(255,255,255,0.99);
+        margin-left: -20px;
+    }
+    
+    #current_issue ul li a:hover:before {
+        content: ">";
+        padding-right: 10px;
+    }
+    
+    #issue_features {
+        margin-top: 1em;
+    }
+    
+    
+/* =CURRENT-ARTICLES
+----------------------------------------------- */
+    
+    #recentArticles {
+        max-width: 100%;
+    }
+    
+    article h3, author, time {
+        font-family: "brandon-grotesque";
+        line-height: 1.5;
+    }
+
+    article h3 {
+        font-size: 2.5em;
+        font-weight: 900;
+        line-height: 1;
+    }
+    
+    author, time {
+        color: #808081;
+        font-size: 1.2em;
+        font-weight: 300;
+        letter-spacing: 1px;
+    }
+    
+    #recentArticles article {
+        border-left: 4px solid rgba(0,0,0,0.0);
+        opacity: 0.8;
+        padding-left: 30px;
+    }
+    
+    #recentArticles article:hover {
+        border-left: 4px solid tomato;
+        cursor: pointer;
+        opacity: 1;
+    }
+    
+    #recentArticles article p {
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        font-weight: 300;
+        padding-bottom: 1em;
+    }
+    
+    
+    .social {
+        background-position: center center;
+        background-repeat: no-repeat;
+        bottom: 40px;
+        display: block;
+        padding: 20px;
+        position: absolute;
+    }
+    
+    .facebook {
+        background-color: #3B5998;
+        background-image: url(img/facebook.svg);
+        height: 29px;
+        left: 40px;
+        width: 14px;
+    }
+    
+    .twitter {
+        background-color: #38ACE0;
+        background-image: url(img/twitter.svg);
+        height: 23px;
+        left: 90px;
+        width: 33px;
+    }
+    
+    .google {
+        background-color: #DD4B39;
+        background-image: url(img/google.svg);
+        height: 32px;
+        left: 140px;
+        width: 21px;
+    }
+}
+
+@media only screen 
+and (min-width: 720px) {
+
+}
+
+@media only screen 
+and (min-width: 1024px) {
+
+
+}
+
+@media only screen 
+and (min-width: 1280px) {
+    .container {
+        background-size: contain;
+        padding-top: 0;
+    }
+        
+
+    
+}
+
+
