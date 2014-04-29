@@ -20,38 +20,34 @@
     <script src="js/widows.js"></script>
 
 <!-- #Stylesheets -->
-    <link href="css/screen.css" rel="stylesheet" type="text/css" media="screen,projection" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="screen,projection" />
     <link href="css/article.css" rel="stylesheet" type="text/css" media="screen,projection" />
 
 </head>
 
 <body>
 
-<div class="container">
-    
-    <section id="aside">
-    
+    <section class="current">
+
         <?php include('current-issue.html'); ?>
-        
+
     </section>
-    
+
     <aside id="signin">
         <a href="#"><img src="img/twitter.svg" />Sign in with Twitter</a>
     </aside>
 
     <div class="wrapper">
-        
+
         <?php include('navigation.html'); ?>
-        
+
         <section id="content">
-            
+
         <?php include('recent-articles.html'); ?>
-            
+
         </section>
 
     </div><!-- /wrapper -->
-
-</div><!-- /container -->
 
 
 
@@ -61,7 +57,7 @@
     e.preventDefault();
     $.backstretch('http://www.redcarpetcrash.com/wp-content/uploads/2013/01/2009_bronson_004.jpg');
   });
- 
+
   $("#anatomy").hover(function(e) {
     e.preventDefault();
       $.backstretch('http://timebulleteer.files.wordpress.com/2010/10/tumblr_l9ujgfcckf1qdz6oko1_1280.jpg');

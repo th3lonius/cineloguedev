@@ -1,0 +1,444 @@
+/*
+Title: Screen styles
+Author: Matthew Mesaros (mesaros.creative@gmail.com)
+*/
+/* CSS Document */
+/* =RESET
+----------------------------------------------- */
+/* line 10, sass/style.scss */
+* {
+  background: transparent;
+  border: 0;
+  font-size: 100%;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+/* line 23, sass/style.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 28, sass/style.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 32, sass/style.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 36, sass/style.scss */
+:focus {
+  outline: 0;
+}
+
+/* line 40, sass/style.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* =BASIC
+----------------------------------------------- */
+/* line 47, sass/style.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 53, sass/style.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 55, sass/style.scss */
+img, object, embed {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 59, sass/style.scss */
+p {
+  font-size: 1.2em;
+  line-height: 1.5;
+  margin-bottom: 1.5em;
+}
+
+/* line 65, sass/style.scss */
+ul {
+  margin-bottom: 1em;
+}
+
+/* line 69, sass/style.scss */
+em {
+  font-weight: 500;
+  font-style: none;
+}
+
+/* =REUSABLE CLASSES
+----------------------------------------------- */
+/* line 76, sass/style.scss */
+.group:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* line 84, sass/style.scss */
+.group {
+  display: inline-block;
+}
+
+/* Hides from IE-mac \*/
+/* line 87, sass/style.scss */
+* html .group {
+  height: 1%;
+}
+
+/* IE6 */
+/* line 88, sass/style.scss */
+*:first-child + html .group {
+  min-height: 1px;
+}
+
+/* IE7 */
+/* End hide from IE-mac */
+/* =LINKS
+----------------------------------------------- */
+/* line 93, sass/style.scss */
+a, a:link, a:visited {
+  text-decoration: none;
+}
+
+/* =PAGE LAYOUT
+----------------------------------------------- */
+/* line 100, sass/style.scss */
+body {
+  color: #333;
+  font-family: "museo-slab","Myriad Pro","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+  font-size: 100%;
+  line-height: 3;
+  position: relative;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  /* Fix for webkit rendering */
+  -webkit-text-size-adjust: 100%;
+}
+
+/* line 111, sass/style.scss */
+header {
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 30%;
+  z-index: 1;
+}
+
+/* =NAVIGATION
+----------------------------------------------- */
+/* line 122, sass/style.scss */
+.nudgeLeft {
+  -webkit-transform: translateY(-450px);
+  -moz-transform: translateX(-450px);
+  -ms-transform: translateX(-450px);
+  -o-transform: translateX(-450px);
+  transform: translateX(-450px);
+}
+
+/* line 130, sass/style.scss */
+nav {
+  position: absolute;
+  left: 40px;
+  top: 220px;
+  z-index: 99;
+  -webkit-transition: all 0.3s ease;
+}
+
+/* line 138, sass/style.scss */
+nav ul li a {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  color: #606061;
+  display: block;
+  font-family: "brandon-grotesque";
+  font-size: 1.25em;
+  padding: 12px 10px 12px 50px;
+  text-align: right;
+}
+
+/* line 148, sass/style.scss */
+nav ul li a:hover {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.9);
+  color: #000;
+}
+
+/* line 153, sass/style.scss */
+a[role=banner] {
+  border-radius: 300px;
+  padding: 20px;
+  position: absolute;
+  left: 60px;
+  top: 40px;
+  z-index: 100;
+  -webkit-transition: all 0.5s ease;
+}
+
+/* line 163, sass/style.scss */
+a[role=banner] img {
+  width: 80px;
+  -webkit-transition: all 0.5s ease;
+}
+
+/* line 168, sass/style.scss */
+a[role=banner]:hover {
+  background: rgba(64, 64, 65, 0.9);
+}
+
+/* line 172, sass/style.scss */
+a[role=banner]:hover img {
+  transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  /* IE 9 */
+  -webkit-transform: rotate(360deg);
+  /* Safari and Chrome */
+}
+
+/* line 178, sass/style.scss */
+nav, a[role=banner] {
+  display: block;
+}
+
+/* line 182, sass/style.scss */
+.container {
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+}
+
+/* line 189, sass/style.scss */
+.wrapper {
+  background: #FFF;
+  box-shadow: -1px 0 10px rgba(0, 0, 0, 0.5);
+  height: auto;
+  left: auto;
+  overflow: hidden;
+  padding: 20px;
+  position: absolute;
+  right: 0;
+  text-align: left;
+  top: 0;
+  width: 72%;
+  -webkit-transition: all 0.5s ease;
+}
+
+/* line 204, sass/style.scss */
+.leftSide {
+  -webkit-transform: translateX(-45%);
+}
+
+/* line 208, sass/style.scss */
+#content {
+  font-size: 0.75em;
+  height: 100%;
+  left: 150px;
+  position: relative;
+  width: 90%;
+}
+
+/* =ASIDE PANEL
+----------------------------------------------- */
+/* line 218, sass/style.scss */
+.current {
+  background: rgba(0, 0, 0, 0.2);
+  font-family: "brandon-grotesque", helvetica, arial;
+  height: 250px;
+  left: 0;
+  padding: 40px;
+  position: fixed;
+  right: 0;
+  text-align: left;
+  top: 0;
+  width: 100%;
+}
+
+/* line 231, sass/style.scss */
+#signin {
+  bottom: 2em;
+  display: inline-block;
+  left: 1em;
+  position: fixed;
+}
+
+/* line 238, sass/style.scss */
+#signin a {
+  background: #00AEEF;
+  color: #FFF;
+  display: inline;
+  font-size: 0.875em;
+  padding: 12px 16px;
+  text-align: center;
+  width: 50%;
+}
+
+/* line 248, sass/style.scss */
+#signin a img {
+  margin-right: 10px;
+  position: relative;
+  top: 5px;
+  width: 30px;
+}
+
+/* =CURRENT-ISSUE
+----------------------------------------------- */
+/* line 258, sass/style.scss */
+#current_issue {
+  color: #FFF;
+  font-family: "brandon-grotesque";
+  font-size: 1.5em;
+  line-height: 1.2;
+}
+
+/* line 265, sass/style.scss */
+#current_issue h2 a {
+  color: #FFF;
+  font-size: 3em;
+  font-weight: 100;
+  left: -25px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+/* line 274, sass/style.scss */
+#current_issue h2 a::before {
+  border-left: 1px solid #FFF;
+  content: "";
+  left: -20px;
+  padding-left: 20px;
+  position: relative;
+}
+
+/* line 282, sass/style.scss */
+#current_issue ul li {
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+/* line 287, sass/style.scss */
+#current_issue ul li a {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* line 291, sass/style.scss */
+#current_issue ul li a:hover {
+  color: rgba(255, 255, 255, 0.99);
+  margin-left: -20px;
+}
+
+/* line 296, sass/style.scss */
+#current_issue ul li a:hover:before {
+  content: ">";
+  padding-right: 10px;
+}
+
+/* line 301, sass/style.scss */
+#issue_features {
+  margin-top: 1em;
+}
+
+/* =CURRENT-ARTICLES
+----------------------------------------------- */
+/* line 309, sass/style.scss */
+#recentArticles {
+  max-width: 100%;
+}
+
+/* line 313, sass/style.scss */
+article h3, author, time {
+  font-family: "brandon-grotesque";
+  line-height: 1.5;
+}
+
+/* line 318, sass/style.scss */
+article h3 {
+  font-size: 2.5em;
+  font-weight: 900;
+  line-height: 1;
+}
+
+/* line 324, sass/style.scss */
+author, time {
+  color: #808081;
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+/* line 331, sass/style.scss */
+#recentArticles article {
+  border-left: 4px solid rgba(0, 0, 0, 0);
+  opacity: 0.8;
+  padding-left: 30px;
+}
+
+/* line 337, sass/style.scss */
+#recentArticles article:hover {
+  border-left: 4px solid tomato;
+  cursor: pointer;
+  opacity: 1;
+}
+
+/* line 343, sass/style.scss */
+#recentArticles article p {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-weight: 300;
+  padding-bottom: 1em;
+}
+
+/* line 350, sass/style.scss */
+.social {
+  background-position: center center;
+  background-repeat: no-repeat;
+  bottom: 40px;
+  display: block;
+  padding: 20px;
+  position: absolute;
+}
+
+/* line 359, sass/style.scss */
+.facebook {
+  background-color: #3B5998;
+  background-image: url(img/facebook.svg);
+  height: 29px;
+  left: 40px;
+  width: 14px;
+}
+
+/* line 367, sass/style.scss */
+.twitter {
+  background-color: #38ACE0;
+  background-image: url(img/twitter.svg);
+  height: 23px;
+  left: 90px;
+  width: 33px;
+}
+
+/* line 375, sass/style.scss */
+.google {
+  background-color: #DD4B39;
+  background-image: url(img/google.svg);
+  height: 32px;
+  left: 140px;
+  width: 21px;
+}
