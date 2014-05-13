@@ -29,6 +29,10 @@
 
 <div class="container">
     
+    <div id="toolbar">
+        
+    </div>
+    
     <section id="aside">
     
         <?php include('current-issue.html'); ?>
@@ -59,7 +63,7 @@
     <script id="backStretch">
   $("#bronson").hover(function(e) {
     e.preventDefault();
-    $.backstretch('http://www.redcarpetcrash.com/wp-content/uploads/2013/01/2009_bronson_004.jpg');
+    $.backstretch('http://centralrecorder.com/wp-content/uploads/2013/02/bronson_2009_1.jpg');
   });
  
   $("#anatomy").hover(function(e) {
